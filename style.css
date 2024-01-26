@@ -1,0 +1,180 @@
+:root{
+    /*purple*/
+    --primary-color:rgb(182, 42, 77);
+    /*blue */
+    --secondary-color:rgb(59, 118, 194);
+}
+#background{
+    background-color:rgb(212,72,107);
+}
+#themeMenu{
+    height:45px;
+    width:90px;
+    background-color:rgb(202,62,97);
+    border-radius:50px;
+}
+
+#calculatorBox{
+    align-content:center;
+    position:fixed;
+    box-shadow: 5px 5px 2px 0px rgb(128, 0, 0);
+    border-radius:10px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:300px;
+    height:400px;
+    background-color:var(--primary-color);
+}
+#keyBox{
+    position:fixed;
+    border-radius:10px;
+    top:100px;
+    width:300px;
+    height:266px;
+    margin-top:24px;
+    margin-bottom:24px;
+}
+#display{
+    width: 250px;
+    height: 75px;
+    background-color: rgb(230, 75, 114);
+    border-radius: 10px;
+    margin-left: 26px;
+    margin-top: 26px;
+    overflow: hidden;
+    position: relative;
+}
+.row{
+    margin-left:24px;
+    margin-right:24px;
+    align-content: center;
+    display:flex;
+}
+.calcButton{
+    background-color:rgb(212, 61, 99);
+    border:none;
+    border-radius:4px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:60px;
+    height:60px;
+    font-size:21px;
+    font-family:sans-serif;
+    color:rgb(167, 38, 70);
+    float:left;
+    margin:2px;
+    transition-duration:0.1s;
+}
+.calcButton:hover{
+    background-color: rgb(230, 75, 114);
+}
+
+/*style of the operation buttons, copied because the calcButtons and opButtons have the same style*/
+
+.calcButton:active{
+    background-color:rgb(201, 52, 89);
+    border-radius:10px;
+    color:rgb(216, 113, 138);
+}
+.opButton{
+    background-color:rgb(212, 61, 99);
+    border:none;
+    border-radius:4px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:60px;
+    height:60px;
+    font-size:21px;
+    font-family:sans-serif;
+    color:rgb(167, 38, 70);
+    float:left;
+    margin:2px;
+    transition-duration:0.1s;
+}
+.opButton:hover{
+    background-color: rgb(230, 75, 114);
+}
+.calcButton:active{
+    background-color:rgb(201, 52, 89);
+    border-radius:10px;
+    color:rgb(216, 113, 138);
+}
+
+#resultButton {
+    background-color:rgb(212, 61, 99);
+    border:none;
+    border-radius:4px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:60px;
+    height:60px;
+    font-size:21px;
+    font-family:sans-serif;
+    color:rgb(167, 38, 70);
+    float:left;
+    margin:2px;
+    transition-duration:0.1s;
+}
+
+#resultButton:hover{
+    background-color: rgb(230, 75, 114);
+}
+
+#resultButton:active {
+    background-color:rgb(201, 52, 89);
+    border-radius:10px;
+    color:rgb(216, 113, 138);
+}
+
+#blue_theme{
+    width:45px;
+    height:45px;
+    border-radius:50px;
+    border:none;
+    box-shadow:0px;
+    background-color:var(--primary-color);
+    cursor: pointer;
+}
+#blue_theme:active{
+    background-color:var(--secondary-color);
+}
+#displayText {
+
+    color: rgba(128, 0, 0, 1);
+    font-size: 24px;
+    display: flex;
+    margin-top: 27.5px;
+    margin-left: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    white-space: nowrap;
+}
+@keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+}
+.marquee {
+    animation: marquee 5s linear infinite;
+  }
+
+  @keyframes enableButton {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  /* Animation for disabling the button */
+  @keyframes disableButton {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(100%);
+    }
+  }
