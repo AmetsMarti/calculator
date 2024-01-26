@@ -73,6 +73,7 @@ resultButton.addEventListener("click", function() {
         }
     } else {
         console.log("escribe el segundo numero, puto");
+        reset();
     }
     reset();
 });
