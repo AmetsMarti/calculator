@@ -89,7 +89,7 @@ function reset(){
 
 themeButton.addEventListener("click", function(){
 
-    let blueTheme = [0,0,0];
+    let blueTheme = [82, 42, 77];
     let purpleTheme = [182,42,77];
     
     
