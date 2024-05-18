@@ -25,6 +25,14 @@ let rightNumber;
 let operation;
 let primaryTheme = true;
 
+let blueTheme = [181, 200, 230];
+let purpleTheme = [61, 85, 122];
+
+//set initial theme at start
+window.onload = function(){
+    updateTheme(purpleTheme);
+}
+
 function updateDisplay(currentNumber){
     displayText.innerText = currentNumber;
 }
@@ -89,11 +97,7 @@ function reset(){
 
 themeButton.addEventListener("click", function(){
 
-    let blueTheme = [82, 42, 77];
-    let purpleTheme = [182,42,77];
     
-    
-
     if(primaryTheme == true){
         themeButton.style.animation = "enableButton 0.3s ease forwards";
         primaryTheme = false;
